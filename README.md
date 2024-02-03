@@ -1,1 +1,1 @@
-# nextjs-starter-kit
+Just a template for creating projects in a short time.
