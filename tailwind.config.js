@@ -7,6 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: "hsl(var(--primary))",
+        secondary: "hsl(var(--secondary))",
+        accent: "hsl(var(--accent))",
+        card: "hsl(var(--card))",
+        popover: "hsl(var(--popover))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         btn: {
