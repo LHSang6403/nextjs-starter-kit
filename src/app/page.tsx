@@ -5,7 +5,7 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <main className="animate-in w-full min-h-screen px-3 bg-blue-100">
+      <main className="animate-in w-full min-h-screen px-3 bg-gray-100">
         Home, code & chill here.
       </main>
       <Footer />
