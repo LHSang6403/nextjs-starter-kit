@@ -4,8 +4,8 @@ import AuthCardTabs from "@app/auth/components/AuthCardTabs";
 export default function Login() {
   return (
     <div className="w-screen min-h-screen sm:pt-10 sm:pb-16 overflow-auto flex flex-col justify-center items-center gap-2">
-      <h1 className="text-lg">App Authentication</h1>
-      <div className="w-fit sm:w-full h-fit bg-white sm:px-2 flex flex-col gap-2">
+      <h1 className="text-lg font-semibold">App Authentication</h1>
+      <div className="w-fit sm:w-full h-fit bg-background sm:px-2 flex flex-col gap-2">
         <span className="w-auto">
           <Link
             href="/"

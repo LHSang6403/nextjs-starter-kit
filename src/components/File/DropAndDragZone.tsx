@@ -133,7 +133,7 @@ const DropAndDragZone = ({ className }: { className: string }) => {
           </button>
           <button
             type="submit"
-            className="ml-auto sm:ml-0 sm:h-9 mt-1 rounded-md border border-purple-400 px-3 text-[12px] font-bold uppercase tracking-wider text-stone-500 transition-colors hover:bg-purple-400 hover:text-white"
+            className="mt-1 sm:h-9 rounded-md border border-purple-400 px-3 text-[12px] font-bold uppercase tracking-wider text-stone-500 transition-colors hover:bg-purple-400 hover:text-white"
           >
             Upload to Cloudinary
           </button>

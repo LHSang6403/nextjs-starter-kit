@@ -1,6 +1,7 @@
 import PrimaryLogo from "@components/PrimaryLogo";
 import Dropdown from "@components/Layout/Header/Dropdown";
 import NavBar from "@components/Layout/Header/NavBar";
+import ThemeButton from "@components/Theme/ThemeButton";
 
 export default function Header() {
   return (
@@ -11,7 +12,8 @@ export default function Header() {
       <nav className="w-full flex justify-center border-b border-b-foreground/10 xl:hidden">
         <NavBar />
       </nav>
-      <div className="flex items-center">
+      <div className="flex items-center gap-2">
+        <ThemeButton />
         <Dropdown />
       </div>
     </div>

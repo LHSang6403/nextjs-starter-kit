@@ -79,7 +79,6 @@ export default function SignUp() {
               <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input
-                  className="h-9"
                   placeholder="Your name"
                   {...field}
                   type="text"
@@ -98,7 +97,6 @@ export default function SignUp() {
               <FormLabel>Phone</FormLabel>
               <FormControl>
                 <Input
-                  className="h-9"
                   placeholder="Your phone number"
                   {...field}
                   type="text"
@@ -117,7 +115,6 @@ export default function SignUp() {
               <FormLabel>Email</FormLabel>
               <FormControl>
                 <Input
-                  className="h-9"
                   placeholder="example@gmail.com"
                   {...field}
                   type="email"
@@ -136,7 +133,6 @@ export default function SignUp() {
               <FormLabel>Password</FormLabel>
               <FormControl>
                 <Input
-                  className="h-9"
                   placeholder="password"
                   {...field}
                   type="password"
@@ -155,7 +151,6 @@ export default function SignUp() {
               <FormLabel>Confirm Password</FormLabel>
               <FormControl>
                 <Input
-                  className="h-9"
                   placeholder="Confirm Password"
                   {...field}
                   type="password"
@@ -168,7 +163,10 @@ export default function SignUp() {
         />
         <div>
           <FormLabel>Action</FormLabel>
-          <Button type="submit" className="w-full mt-2 text-white">
+          <Button
+            type="submit"
+            className="w-full mt-2 bg-foreground text-background"
+          >
             Register
           </Button>
         </div>

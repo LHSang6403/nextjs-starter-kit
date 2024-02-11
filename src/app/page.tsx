@@ -6,7 +6,7 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <main className="animate-in w-screen min-h-screen px-3 bg-gray-100">
+      <main className="animate-in w-screen min-h-screen px-3">
         Home, code & chill here.
         <div className="w-[80%] mx-auto">
           <HomeSlider />

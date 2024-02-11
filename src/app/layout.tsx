@@ -1,6 +1,7 @@
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import NavDrawer from "@components/Layout/Drawer/NavDrawer";
+import ThemeProvider from "@components/Providers/ThemeProvider";
 
 export const metadata = {
   title: "Next.js Starter Kit",
@@ -14,12 +15,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html
+      lang="en"
+      className={`light ${GeistSans.className}`}
+      style={{ colorScheme: "light" }}
+      suppressHydrationWarning
+    >
       <body className="bg-background text-foreground">
-        <main className="w-screen max-w-[2200px] min-h-screen mx-auto overflow-hidden flex flex-col items-center">
-          {children}
-          <NavDrawer />
-        </main>
+        <ThemeProvider>
+          <main className="w-screen max-w-[2200px] min-h-screen mx-auto overflow-hidden flex flex-col items-center">
+            {children}
+            <NavDrawer />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

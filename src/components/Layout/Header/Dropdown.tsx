@@ -35,7 +35,7 @@ export default function Dropdown() {
           Menu
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-white mx-3">
+      <DropdownMenuContent className="w-56 bg-background mx-3">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>

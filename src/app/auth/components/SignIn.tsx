@@ -67,7 +67,6 @@ export default function SignIn() {
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input
-                    className="h-9"
                     placeholder="example@gmail.com"
                     {...field}
                     type="email"
@@ -86,7 +85,6 @@ export default function SignIn() {
                 <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
-                    className="h-9"
                     placeholder="password"
                     {...field}
                     type="password"
@@ -101,7 +99,7 @@ export default function SignIn() {
           <div className="w-full flex flex-row gap-3">
             <Button
               type="submit"
-              className="w-full text-foreground hover:text-white bg-background"
+              className="w-full text-foreground hover:text-accent bg-background"
             >
               Forget Password
             </Button>

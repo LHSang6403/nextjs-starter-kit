@@ -17,13 +17,13 @@ export default function AuthCardTabs() {
     >
       <TabsList className="w-full grid grid-cols-2">
         <TabsTrigger
-          className="data-[state=active]:bg-foreground data-[state=active]:text-white rounded-md"
+          className="data-[state=active]:bg-foreground data-[state=active]:text-accent rounded-md"
           value="sign-in"
         >
           Sign In
         </TabsTrigger>
         <TabsTrigger
-          className="data-[state=active]:bg-foreground data-[state=active]:text-white rounded-md"
+          className="data-[state=active]:bg-foreground data-[state=active]:text-accent rounded-md"
           value="sign-up"
         >
           Sign Up
