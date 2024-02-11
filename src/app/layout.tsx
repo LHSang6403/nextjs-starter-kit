@@ -1,5 +1,6 @@
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import NavDrawer from "@components/Layout/Drawer/NavDrawer";
 
 export const metadata = {
   title: "Next.js Starter Kit",
@@ -15,8 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className}>
       <body className="bg-background text-foreground">
-        <main className="w-screen max-w-[2200px] min-h-screen mx-auto flex flex-col items-center">
+        <main className="w-screen max-w-[2200px] min-h-screen mx-auto overflow-hidden flex flex-col items-center">
           {children}
+          <NavDrawer />
         </main>
       </body>
     </html>

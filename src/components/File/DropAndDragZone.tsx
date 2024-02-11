@@ -93,7 +93,7 @@ const DropAndDragZone = ({ className }: { className: string }) => {
         })}
       >
         <input {...getInputProps({ name: "file" })} />
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="w-full flex flex-col items-center justify-center gap-4 text-justify">
           <ArrowUpTrayIcon className="h-5 w-5 fill-current" />
           {isDragActive ? (
             <p>Drop the files here ...</p>
@@ -105,18 +105,18 @@ const DropAndDragZone = ({ className }: { className: string }) => {
 
       {/* Preview */}
       <section className="mt-10">
-        <div className="flex gap-4">
+        <div className="flex flex-row sm:flex-col gap-4">
           <h2 className="title text-3xl font-semibold">Preview</h2>
           <button
             type="button"
             onClick={removeAll}
-            className="mt-1 rounded-md border border-rose-400 px-3 text-[12px] font-bold uppercase tracking-wider text-stone-500 transition-colors hover:bg-rose-400 hover:text-white"
+            className="mt-1 sm:h-9 rounded-md border border-rose-400 px-3 text-[12px] font-bold uppercase tracking-wider text-stone-500 transition-colors hover:bg-rose-400 hover:text-white"
           >
             Remove all files
           </button>
           <button
             type="submit"
-            className="ml-auto mt-1 rounded-md border border-purple-400 px-3 text-[12px] font-bold uppercase tracking-wider text-stone-500 transition-colors hover:bg-purple-400 hover:text-white"
+            className="ml-auto sm:ml-0 sm:h-9 mt-1 rounded-md border border-purple-400 px-3 text-[12px] font-bold uppercase tracking-wider text-stone-500 transition-colors hover:bg-purple-400 hover:text-white"
           >
             Upload to Cloudinary
           </button>

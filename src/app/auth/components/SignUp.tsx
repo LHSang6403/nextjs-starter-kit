@@ -69,7 +69,7 @@ export default function SignUp() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-fit h-fit grid grid-cols-2 gap-4"
+        className="w-fit h-fit grid grid-cols-2 gap-4 sm:w-full sm:flex sm:flex-col"
       >
         <FormField
           control={form.control}

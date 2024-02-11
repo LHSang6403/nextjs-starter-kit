@@ -1,5 +1,5 @@
-import Header from "@components/Header/Header";
-import Footer from "@components/Footer/Footer";
+import Header from "@/components/Layout/Header/Header";
+import Footer from "@/components/Layout/Footer/Footer";
 
 export const metadata = {
   title: "Public | Next.js Kit",
@@ -15,7 +15,9 @@ export default function MainLayout({
   return (
     <>
       <Header />
-      <div className="w-full min-h-screen flex flex-col gap-4">{children}</div>
+      <div className="w-full h-fit min-h-screen flex flex-col gap-4">
+        {children}
+      </div>
       <Footer />
     </>
   );
