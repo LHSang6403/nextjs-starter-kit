@@ -13,7 +13,7 @@ export default async function Page() {
   const data = await getUsers();
 
   return (
-    <section className="mx-10">
+    <section className="mx-10 sm:mx-4">
       <h1 className="my-2 text-2xl font-medium">All Users</h1>
       <DataTable columns={columns} data={data} />
     </section>

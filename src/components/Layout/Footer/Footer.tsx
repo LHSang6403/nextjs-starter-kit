@@ -2,7 +2,7 @@ import SecondaryLogo from "@/components/SecondaryLogo";
 
 export default function Footer() {
   return (
-    <footer className="w-full h-72 xl:h-fit xl:mb-8 border-t border-t-foreground/10 p-8 sm:px-3 flex flex-col justify-center text-center gap-6 text-xs">
+    <footer className="w-full h-72 xl:h-fit xl:mb-8 border-t border-t-foreground/10 p-8 sm:px-4 flex flex-col justify-center text-center gap-6 text-xs">
       <div className="flex justify-center items-center">
         <SecondaryLogo />
       </div>
@@ -33,7 +33,7 @@ export default function Footer() {
         <a
           href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
           target="_blank"
-          className="hover:underline border px-2 py-1 border-foreground/5 rounded-md"
+          className="hover:underline border px-2 py-2 border-foreground/5 rounded-md"
           rel="noreferrer"
         >
           Supabase
@@ -41,7 +41,7 @@ export default function Footer() {
         <a
           href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
           target="_blank"
-          className="hover:underline border px-2 py-1 border-foreground/5 rounded-md"
+          className="hover:underline border px-2 py-2 border-foreground/5 rounded-md"
           rel="noreferrer"
         >
           Supabase
@@ -49,7 +49,7 @@ export default function Footer() {
         <a
           href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
           target="_blank"
-          className="hover:underline border px-2 py-1 border-foreground/5 rounded-md"
+          className="hover:underline border px-2 py-2 border-foreground/5 rounded-md"
           rel="noreferrer"
         >
           Supabase
@@ -57,7 +57,7 @@ export default function Footer() {
         <a
           href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
           target="_blank"
-          className="hover:underline border px-2 py-1 border-foreground/5 rounded-md"
+          className="hover:underline border px-2 py-2 border-foreground/5 rounded-md"
           rel="noreferrer"
         >
           Supabase
@@ -65,7 +65,7 @@ export default function Footer() {
         <a
           href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
           target="_blank"
-          className="hover:underline border px-2 py-1 border-foreground/5 rounded-md"
+          className="hover:underline border px-2 py-2 border-foreground/5 rounded-md"
           rel="noreferrer"
         >
           Supabase
