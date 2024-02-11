@@ -32,7 +32,7 @@ export default function BottomDrawer() {
               Just a short description of a web application.
             </DrawerDescription>
           </DrawerHeader>
-          <div className="w-full h-fit p-4">
+          <div className="w-full h-fit p-4 flex justify-center items-center">
             <NavBar />
           </div>
           <DrawerFooter>
