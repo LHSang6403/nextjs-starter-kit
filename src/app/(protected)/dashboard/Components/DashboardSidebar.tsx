@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function DashboardSidebar() {
   const dashboardSidebarList = [
     { name: "Dashboard1", link: "/dashboard" },
-    { name: "Dashboard2", link: "/dashboard" },
+    { name: "Overview", link: "/dashboard/overviewChart" },
     { name: "Dashboard3", link: "/dashboard" },
     { name: "Dashboard4", link: "/dashboard" },
     { name: "Dashboard5", link: "/dashboard" },
