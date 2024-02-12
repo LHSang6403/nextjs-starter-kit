@@ -29,7 +29,7 @@ export default function Footer() {
         Components: Leverage the power of React to create reusable UI
         components, making your codebase more modular and maintainable.
       </p>
-      <nav className="flex flex-row justify-around sm:grid sm:grid-cols-2 sm:gap-3">
+      <nav className="w-[80%] mx-auto flex flex-row justify-around sm:grid sm:grid-cols-2 sm:gap-3">
         <a
           href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
           target="_blank"
