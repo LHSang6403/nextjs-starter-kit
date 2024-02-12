@@ -46,9 +46,6 @@ export default function NavBar() {
         <NavigationMenuItem>
           <NavCombobox />
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavCombobox />
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

@@ -10,7 +10,7 @@ import {
 export default function HomeSlider() {
   return (
     <Carousel className="max-w-[80vw] mx-auto">
-      <CarouselPrevious />
+      <CarouselPrevious className="xl:hidden" />
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
@@ -26,7 +26,7 @@ export default function HomeSlider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNext />
+      <CarouselNext className="xl:hidden" />
     </Carousel>
   );
 }
