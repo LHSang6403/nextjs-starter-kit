@@ -7,8 +7,9 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
+    "./src/components/ui/editor/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class",
+  darkMode: ["class"],
   theme: {
     screens: {
       "2xl": { max: "1535px" },
@@ -19,6 +20,10 @@ module.exports = {
       ssm: { max: "400px" },
     },
     extend: {
+      fontFamily: {
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        default: ["var(--font-default)", "system-ui", "sans-serif"],
+      },
       colors: {
         primary: "hsl(var(--primary))",
         secondary: "hsl(var(--secondary))",
@@ -30,6 +35,19 @@ module.exports = {
         btn: {
           background: "hsl(var(--btn-background))",
           "background-hover": "hsl(var(--btn-background-hover))",
+        },
+        white: "var(--novel-white)",
+        stone: {
+          50: "var(--novel-stone-50)",
+          100: "var(--novel-stone-100)",
+          200: "var(--novel-stone-200)",
+          300: "var(--novel-stone-300)",
+          400: "var(--novel-stone-400)",
+          500: "var(--novel-stone-500)",
+          600: "var(--novel-stone-600)",
+          700: "var(--novel-stone-700)",
+          800: "var(--novel-stone-800)",
+          900: "var(--novel-stone-900)",
         },
         // light mode
         tremor: {
@@ -92,6 +110,45 @@ module.exports = {
           },
         },
       },
+      boxShadow: {
+        // light
+        "tremor-input": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "tremor-card":
+          "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "tremor-dropdown":
+          "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        // dark
+        "dark-tremor-input": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "dark-tremor-card":
+          "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "dark-tremor-dropdown":
+          "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+      },
+      borderRadius: {
+        "tremor-small": "0.375rem",
+        "tremor-default": "0.5rem",
+        "tremor-full": "9999px",
+      },
+      fontSize: {
+        "tremor-label": ["0.75rem", { lineHeight: "1rem" }],
+        "tremor-default": ["0.875rem", { lineHeight: "1.25rem" }],
+        "tremor-title": ["1.125rem", { lineHeight: "1.75rem" }],
+        "tremor-metric": ["1.875rem", { lineHeight: "2.25rem" }],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
     },
   },
   safelist: [
@@ -127,5 +184,6 @@ module.exports = {
     require("tailwindcss-animate"),
     require("@headlessui/tailwindcss"),
     require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
   ],
 };

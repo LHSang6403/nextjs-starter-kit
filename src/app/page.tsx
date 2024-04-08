@@ -2,15 +2,18 @@ import Header from "@components/Layout/Header/Header";
 import Footer from "@components/Layout/Footer/Footer";
 import HomeSlider from "@components/Sliders/HomeSlider";
 import Template from "@app/(main)/template";
+import Editor from "@components/Editor";
 
 export default async function Home() {
   return (
     <>
       <Header />
       <Template>
-        <main className="animate-in w-screen min-h-screen px-3">
-          Home, code & chill here.
-          <div className="w-[80%] mx-auto">
+        <main className="flex min-h-screen w-screen flex-col items-center gap-4 px-3 py-4 animate-in">
+          <div className="w-[80%] overflow-hidden rounded-lg border">
+            <Editor editable={true} />
+          </div>
+          <div className="w-[80%]">
             <HomeSlider />
           </div>
         </main>

@@ -1,5 +1,6 @@
 import { GeistSans } from "geist/font/sans";
-import "./globals.css";
+import "@app/styles/globals.css";
+import "@app/styles/prosemirror.css";
 import NavDrawer from "@components/Layout/Drawer/NavDrawer";
 import ThemeProvider from "@components/Providers/ThemeProvider";
 
@@ -23,7 +24,7 @@ export default function RootLayout({
     >
       <body className="bg-background text-foreground">
         <ThemeProvider>
-          <main className="w-screen max-w-[2200px] min-h-screen mx-auto overflow-hidden flex flex-col items-center">
+          <main className="mx-auto flex min-h-screen w-screen max-w-[2200px] flex-col items-center overflow-hidden">
             {children}
             <NavDrawer />
           </main>
