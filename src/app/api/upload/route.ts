@@ -82,10 +82,10 @@ export async function POST(req: Request) {
       return new Response("Internal Server Error", { status: 500 });
     }
 
-    return Response.json({
-      data: "ok",
-      url: "" + data!.path,
-    });
+    // return Response.json({
+    //   data: "ok",
+    //   url: "" + data!.path,
+    // });
   } catch (error) {
     console.error("Error handling POST request:", error);
     return new Response("Internal Server Error", { status: 500 });
