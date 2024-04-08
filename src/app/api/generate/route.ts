@@ -4,7 +4,7 @@ import { kv } from "@vercel/kv";
 import { Ratelimit } from "@upstash/ratelimit";
 
 const config = new Configuration({
-  apiKey: "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",
+  apiKey: "",
 });
 const openai = new OpenAIApi(config);
 

@@ -39,23 +39,19 @@ import { cookies } from "next/headers";
 async function createSupabaseServerClient() {
   const cookieStore = cookies();
 
-  return createServerClient(
-    "https://ocxohkgmygzfysykcspe.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9jeG9oa2dteWd6ZnlzeWtjc3BlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTEwODg4NjcsImV4cCI6MjAyNjY2NDg2N30.1riYmPumPcVK5YJdiOCtueHMouE055evB1uLCrVcc_Q",
-    {
-      cookies: {
-        get(name: string) {
-          return cookieStore.get(name)?.value;
-        },
-        set(name: string, value: string, options: CookieOptions) {
-          cookieStore.set({ name, value, ...options });
-        },
-        remove(name: string, options: CookieOptions) {
-          cookieStore.set({ name, value: "", ...options });
-        },
+  return createServerClient("", "", {
+    cookies: {
+      get(name: string) {
+        return cookieStore.get(name)?.value;
+      },
+      set(name: string, value: string, options: CookieOptions) {
+        cookieStore.set({ name, value, ...options });
+      },
+      remove(name: string, options: CookieOptions) {
+        cookieStore.set({ name, value: "", ...options });
       },
     },
-  );
+  });
 }
 
 export const runtime = "edge";
@@ -88,9 +84,7 @@ export async function POST(req: Request) {
 
     return Response.json({
       data: "ok",
-      url:
-        "https://ocxohkgmygzfysykcspe.supabase.co/storage/v1/object/public/public_files/" +
-        data!.path,
+      url: "" + data!.path,
     });
   } catch (error) {
     console.error("Error handling POST request:", error);
