@@ -1,45 +1,55 @@
 "use client";
 
-import { Button } from "@components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@components/ui/drawer";
-import NavBar from "@components//Layout/Header/NavBar";
+} from "@/components/ui/drawer";
+import navUrls from "../Header/navUrls.json";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
 
 export default function BottomDrawer() {
+  const path = usePathname();
+
   return (
     <Drawer>
       <DrawerTrigger asChild>
         <Button
-          className="h-7 bg-foreground hover:bg-foreground border-foreground"
+          className="h-full w-full border-foreground bg-foreground hover:bg-foreground"
           variant="outline"
         >
-          Navigation Drawer
+          Navigate
         </Button>
       </DrawerTrigger>
       <DrawerContent>
-        <div className="mx-auto w-full max-w-sm">
+        <div className="mx-auto w-full max-w-sm pb-6">
           <DrawerHeader>
-            <DrawerTitle>Navigate your app</DrawerTitle>
-            <DrawerDescription>
-              Just a short description of a web application.
-            </DrawerDescription>
+            <DrawerTitle>Switch page</DrawerTitle>
+            <DrawerDescription>Move to other page in CARB</DrawerDescription>
           </DrawerHeader>
-          <div className="w-full h-fit p-4 flex justify-center items-center">
-            <NavBar />
+          <div className="mx-auto grid h-fit w-fit grid-cols-2 items-center justify-center gap-2 p-4 sm:w-full">
+            {navUrls.map((navUrl, index) => (
+              <DrawerClose key={index} asChild>
+                <Link
+                  href={navUrl.url}
+                  className={`${
+                    path === navUrl.url
+                      ? "bg-foreground text-background"
+                      : "bg-background text-foreground"
+                  } flex h-10 w-32 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium transition-colors sm:w-full`}
+                >
+                  <span>{navUrl.name}</span>
+                </Link>
+              </DrawerClose>
+            ))}
           </div>
-          <DrawerFooter>
-            <DrawerClose asChild>
-              <Button className="text-background">Cancel</Button>
-            </DrawerClose>
-          </DrawerFooter>
         </div>
       </DrawerContent>
     </Drawer>

@@ -1,31 +1,63 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+// import { useSession } from "@/zustand/useSession";
+import { Wallet, Folder } from "lucide-react";
+
+export const dashboardSidebarList = [
+  {
+    name: "Overview",
+    link: "/dashboard",
+    icon: <Folder className="h-4 w-4" />,
+    permissions: [],
+  },
+  {
+    name: "Finance",
+    link: "/dashboard/finance",
+    icon: <Wallet className="h-4 w-4" />,
+    permissions: ["Admin"],
+  },
+  {
+    name: "Trips",
+    link: "/dashboard/trips",
+    icon: <Wallet className="h-4 w-4" />,
+    permissions: ["Admin"],
+  },
+];
 
 export default function DashboardSidebar() {
-  const dashboardSidebarList = [
-    { name: "Blocks", link: "/dashboard/blocks" },
-    { name: "Dashboard1", link: "/dashboard" },
-    { name: "Overview", link: "/dashboard/overviewChart" },
-    { name: "Dashboard3", link: "/dashboard" },
-    { name: "Dashboard4", link: "/dashboard" },
-    { name: "Dashboard5", link: "/dashboard" },
-  ];
+  const pathname = usePathname();
+  // const { session, removeSession } = useSession();
 
   return (
-    <div className="h-[calc(100vh_-_4rem)] w-full rounded-br-lg border-b border-r border-foreground/10 px-10 py-2 xl:h-fit xl:border-none sm:px-4">
-      <h1 className="mx-4 mb-2 border-b border-foreground/10 pb-2 text-2xl font-medium text-foreground xl:mx-0">
-        Routes
-      </h1>
-      <ul className="flex flex-col gap-2 xl:h-12 xl:flex-row xl:overflow-auto">
-        {dashboardSidebarList.map((item, index) => (
-          <Link
-            key={index}
-            href={item.link}
-            className="hover:text-accent-foreground focus:text-accent-foreground flex h-9 w-full items-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent focus:bg-accent focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 xl:w-32 xl:border xl:border-foreground/10"
-          >
-            {item.name}
-          </Link>
-        ))}
-      </ul>
+    <div className="flex h-full w-60 flex-col justify-between gap-2 border-r px-4 pt-4 xl:w-full xl:border-none xl:px-0">
+      <nav className="flex flex-col gap-2 overflow-auto">
+        {dashboardSidebarList.map((item, index) => {
+          if (true)
+            return (
+              <Link
+                key={index}
+                href={item.link}
+                className={`${
+                  item.link === pathname.split("/").slice(0, 3).join("/")
+                    ? "bg-accent shadow-sm"
+                    : "bg-background"
+                } hover:text-accent-foreground focus:text-accent-foreground mx-auto flex h-9 w-full
+            flex-row  items-center gap-2 
+            rounded-md px-4 py-2 text-sm font-medium 
+            transition-colors hover:bg-accent focus:bg-accent 
+            focus:outline-none disabled:pointer-events-none disabled:opacity-50 
+            data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 
+            
+            `}
+              >
+                {item.icon}
+                <span className="mt-0.5">{item.name}</span>
+              </Link>
+            );
+        })}
+      </nav>
     </div>
   );
 }

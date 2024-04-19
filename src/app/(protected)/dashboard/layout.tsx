@@ -8,11 +8,13 @@ export default function MainLayout({
 }): ReturnType<React.FC> {
   return (
     <div className="max-w-screen flex min-h-screen w-full flex-row xl:flex-col">
-      <div className="w-[20%] xl:w-full">
+      <div className="w-fit xl:hidden">
         <DashboardSidebar />
       </div>
       <TooltipProvider>
-        <div className="flex w-[80%] flex-col gap-4 xl:w-full">{children}</div>
+        <div className="flex w-full flex-col gap-4 pt-4 sm:pt-2">
+          {children}
+        </div>
       </TooltipProvider>
     </div>
   );
